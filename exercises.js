@@ -1,32 +1,24 @@
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
+"use strict";
 //2. Personal Message: Store a person’s name in a variable, and print a message to that person
-var username = "Tahreem Feroz";
+let username = "Tahreem Feroz";
 console.log("Hello " + username);
 // 3. Name Cases: Store a person’s name in a variable, and then print that person’s name in lowercase, uppercase, and titlecase.
 console.log(username.toUpperCase());
 console.log(username.toLowerCase());
-var titleCase = "";
-username.split(" ").forEach(function (word) {
-    var capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+let titleCase = "";
+username.split(" ").forEach(word => {
+    const capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
     titleCase += capitalizedWord + " ";
 });
 console.log(titleCase);
 // 4. Famous Quote: Find a quote from a famous person you admire. Print the quote and the name of its author. Your output should look something like the following, including the quotation marks:
-console.log("Albert Einstein once said, \u201CA person who never made a mistake never tried anything new.\u201D");
+console.log(`Albert Einstein once said, “A person who never made a mistake never tried anything new.”`);
 // 5. Famous Quote 2: Repeat Exercise 4, but this time store the famous person’s name in a variable called famous_person. Then compose your message and store it in a new variable called message. Print your message.
-var famous_person = "Nelson Mandela";
-var message = "".concat(famous_person, " said,\"It always seem impossible until its done\"");
+let famous_person = "Nelson Mandela";
+let message = `${famous_person} said,"It always seem impossible until its done"`;
 console.log(message);
 //6. Stripping Names: Store a person’s name, and include some whitespace characters at the beginning and end of the name. Make sure you use each character combination, "\t" and "\n", at least once. Print the name once, so the whitespace around the name is displayed. Then print the name after striping the white spaces.
-var whitspaceName = "\nTahreem\t\tFeroz";
+let whitspaceName = "\nTahreem\t\tFeroz";
 console.log(whitspaceName);
 //7. Number Eight: Write addition, subtraction, multiplication, and division operations that each result in the number 8. Be sure to enclose your operations in print statements to see the results.
 console.log(5 + 3);
@@ -39,21 +31,21 @@ console.log(5 + 3);
 console.log(5 + 3);
 console.log(5 + 3);
 //9. Favorite Number: Store your favorite number in a variable. Then, using that variable, create a message that reveals your favorite number. Print that message.
-var number = 4;
+let number = 4;
 console.log("My favourite number is " + number);
 //10. Adding Comments: Choose two of the programs you’ve written, and add at least one comment to each. If you don’t have anything specific to write because your programs are too simple at this point, just add your name and the current date at the top of each program file. Then write one sentence describing what the program does.
 //11. Names: Store the names of a few of your friends in a array called names. Print each person’s name by accessing each element in the list, one at a time.
-var names = ["tabitha", "jolie", "sarah"];
+let names = ["tabitha", "jolie", "sarah"];
 console.log(names[0]);
 console.log(names[1]);
 console.log(names[2]);
 //12. Greetings: Start with the array you used in Exercise 11, but instead of just printing each person’s name, print a message to them. The text of each message should be the same, but each message should be personalized with the person’s name.
 console.log("Hello " + names);
 //13. Your Own Array: Think of your favorite mode of transportation, such as a motorcycle or a car, and make a list that stores several examples. Use your list to print a series of statements about these items, such as “I would like to own a Honda motorcycle.”
-var transport = ["BR-V", "Elantra", "Audi", "Honda Civic"];
+let transport = ["BR-V", "Elantra", "Audi", "Honda Civic"];
 console.log("I would like to own a  " + transport);
 //14. Guest List: If you could invite anyone, living or deceased, to dinner, who would you invite? Make a list that includes at least three people you’d like to invite to dinner. Then use your list to print a message to each person, inviting them to dinner.
-var guest = ["tabitha", "jolie", "sarah"];
+let guest = ["tabitha", "jolie", "sarah"];
 console.log("I would like to invite you for dinner " + guest);
 //15. Changing Guest List: You just heard that one of your guests can’t make the dinner, so you need to send out a new set of invitations. You’ll have to think of someone else to invite.
 // • Start with your program from Exercise 14. Add a print statement at the end of your program stating the name of the guest who can’t make it.
@@ -83,21 +75,21 @@ console.log("You are still invited for dinner " + guest);
 // • Remove the last two names from your list, so you have an empty list. Print your list to make sure you actually have an empty list at the end of your program.
 guest.pop();
 guest.pop();
-for (var i = 0; i <= guest.length; i++) {
+for (let i = 0; i <= guest.length; i++) {
     console.log(guest[i]);
 }
 // 18. Seeing the World: Think of at least five places in the world you’d like to visit.
 // • Store the locations in a array. Make sure the array is not in alphabetical order.
-var places = ["New York", "London", "Paris", "Tokyo", "Sydney"];
+let places = ["New York", "London", "Paris", "Tokyo", "Sydney"];
 // • Print your array in its original order.
 console.log(places);
 // • Print your array in alphabetical order without modifying the actual list.
-var places_in_order = __spreadArray([], places, true).sort();
+let places_in_order = [...places].sort();
 console.log(places_in_order);
 // • Show that your array is still in its original order by printing it.
 console.log(places);
 // • Print your array in reverse alphabetical order without changing the order of the original list.
-var places_in_reverseorder = places_in_order.sort().reverse();
+let places_in_reverseorder = places_in_order.sort().reverse();
 console.log(places_in_reverseorder);
 // • Show that your array is still in its original order by printing it again.
 console.log(places);
@@ -113,20 +105,20 @@ console.log(places.sort().reverse());
 //19. Dinner Guests: Working with one of the programs from Exercises 14 through 18, print a message indicating the number of people you are inviting to dinner.
 console.log(guest.length);
 //20. Think of something you could store in a array. For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. Write a program that creates a list containing these items.
-var cities = ["Karachi", "Lahore", "Islamabad", "Peshawer", "Quetta"];
-var city1 = {
+let cities = ["Karachi", "Lahore", "Islamabad", "Peshawer", "Quetta"];
+let city1 = {
     cityName: "Karachi",
     province: "Sindh",
     country: "Pakistan",
     population: 14916456,
 };
-var city2 = {
+let city2 = {
     cityName: "Lahore",
     province: "Punjsb",
     country: "Pakistan",
     population: 11126285,
 };
-var city3 = {
+let city3 = {
     cityName: "Quetta",
     province: "Balochistan",
     country: "Pakistan",
@@ -144,7 +136,7 @@ console.log(cities[2]); //corrected
 // console.log(car == 'subaru')
 // • Look closely at your results, and make sure you understand why each line evaluates to True or False.
 // • Create at least 10 tests. Have at least 5 tests evaluate to True and another 5 tests evaluate to False.
-var num = 43;
+let num = 43;
 console.log(num == 41); // false
 console.log(num >= 98); // false
 console.log(num <= 21); // false
@@ -157,14 +149,14 @@ console.log(num > 34); // true
 console.log(num == 43); // true
 //24. More Conditional Tests: You don’t have to limit the number of tests you create to 10. If you want to try more comparisons, write more tests. Have at least one True and one False result for each of the following:
 // • Tests for equality and inequality with strings
-var string1 = "Apple", string2 = "Apple", string3 = "mango";
+let string1 = "Apple", string2 = "Apple", string3 = "mango";
 console.log(string1 == string2); //true
 console.log(string1 == string3); //false
 // • Tests using the lower case function
 console.log(string1.toLowerCase() == string2); //false
 console.log(string1.toLowerCase() == string2.toLowerCase()); //true
 // • Numerical tests involving equality and inequality, greater than and less than, greater than or equal to, and less than or equal to
-var num1 = 2, num2 = 4, num3 = 2;
+let num1 = 2, num2 = 4, num3 = 2;
 // Test for equality
 console.log(num1 == num2); // false
 console.log(num1 == num3); // true
@@ -187,14 +179,14 @@ console.log(num1 <= num3); // true
 console.log(num1 == num2 && num1 == num3);
 console.log(num1 == num2 || num1 == num3);
 // • Test whether an item is in a array
-var numbers = [1, 2, 3, 4];
+let numbers = [1, 2, 3, 4];
 console.log(numbers.indexOf(3));
 // • Test whether an item is not in a array
 console.log(numbers.indexOf(7));
 //25. Alien Colors #1: Imagine an alien was just shot down in a game. Create a variable called alien_color and assign it a value of 'green', 'yellow', or 'red'.
 // • Write an if statement to test whether the alien’s color is green. If it is, print a message that the player just earned 5 points.
 // • Write one version of this program that passes the if test and another that fails. (The version that fails will have no output.)
-var alien_color = "green";
+let alien_color = "green";
 if (alien_color == "green") {
     console.log("the player just earned 5 points");
 }
@@ -256,7 +248,7 @@ console.log("the player earned 15 points");
 // • If the person is at least 13 years old but less than 20, print a message that the person is a teenager.
 // • If the person is at least 20 years old but less than 65, print a message that the person is an adult.
 // • If the person is age 65 or older, print a message that the person is an elder.
-var age = 23;
+let age = 23;
 if (age < 2) {
     console.log("you are a baby");
 }
@@ -279,11 +271,10 @@ else if (age >= 65) {
 // • Make a array of your three favorite fruits and call it favorite_fruits.
 // • Write five if statements. Each should check whether a certain kind of fruit is in your array. If the fruit is in your array, the if block should print a statement, such as You really like bananas!
 // Make an array of favorite fruits
-var favorite_fruits = ["banana", "apple", "mango"];
+const favorite_fruits = ["banana", "apple", "mango"];
 // Check if each fruit is in the array and print corresponding statements
 function checkFavoriteFruits(fruit) {
-    for (var _i = 0, favorite_fruits_1 = favorite_fruits; _i < favorite_fruits_1.length; _i++) {
-        var favorite = favorite_fruits_1[_i];
+    for (const favorite of favorite_fruits) {
         if (favorite === fruit) {
             return true;
         }
@@ -306,10 +297,10 @@ if (checkFavoriteFruits("strawberry")) {
     console.log("You really like strawberries!");
 }
 //30. Hello Admin: Make a array of five or more usernames, including the name 'admin'. Imagine you are writing code that will print a greeting to each user after they log in to a website. Loop through the array, and print a greeting to each user:
-var usernames = ["Admin", "Eric", "Ali", "Sara"];
+let usernames = ["Admin", "Eric", "Ali", "Sara"];
 // • If the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report?
 // • Otherwise, print a generic greeting, such as Hello Eric, thank you for logging in again.
-for (var i = 0; i < usernames.length; i++) {
+for (let i = 0; i < usernames.length; i++) {
     if (usernames[i] === "Admin") {
         console.log("Hello Admin, would you like to see a status report?");
     }
@@ -320,7 +311,7 @@ for (var i = 0; i < usernames.length; i++) {
 //31. No Users: Add an if test to Exercise 28 to make sure the list of users is not empty.
 // • If the list is empty, print the message We need to find some users!
 // • Remove all of the usernames from your array, and make sure the correct message is printed.
-for (var i = 0; i < usernames.length; i++) {
+for (let i = 0; i < usernames.length; i++) {
     usernames.pop();
 }
 if (usernames.length == 0) {
@@ -332,68 +323,65 @@ if (usernames.length == 0) {
 // • Loop through the new_users list to see if each new username has already been used. If it has, print a message that the person will need to enter a new username. If a username has not been used, print a message saying that the username is available.
 // • Make sure your comparison is case insensitive. If 'John' has been used, 'JOHN' should not be accepted.
 function check_usernames(current_users, new_users) {
-    var lowerCaseCurrentUsers = [];
+    const lowerCaseCurrentUsers = [];
     // Convert current usernames to lowercase
-    for (var _i = 0, current_users_1 = current_users; _i < current_users_1.length; _i++) {
-        var user = current_users_1[_i];
+    for (const user of current_users) {
         lowerCaseCurrentUsers.push(user.toLowerCase());
     }
-    for (var _a = 0, new_users_1 = new_users; _a < new_users_1.length; _a++) {
-        var newUsername = new_users_1[_a];
-        var lowerCaseNewUsername = newUsername.toLowerCase();
-        var isTaken = false;
+    for (const newUsername of new_users) {
+        const lowerCaseNewUsername = newUsername.toLowerCase();
+        let isTaken = false;
         // Check if the new username is already taken
-        for (var _b = 0, lowerCaseCurrentUsers_1 = lowerCaseCurrentUsers; _b < lowerCaseCurrentUsers_1.length; _b++) {
-            var username_1 = lowerCaseCurrentUsers_1[_b];
-            if (username_1 === lowerCaseNewUsername) {
+        for (const username of lowerCaseCurrentUsers) {
+            if (username === lowerCaseNewUsername) {
                 isTaken = true;
                 break;
             }
         }
         if (isTaken) {
-            console.log("Username '".concat(newUsername, "' is already taken. Please enter a new username."));
+            console.log(`Username '${newUsername}' is already taken. Please enter a new username.`);
         }
         else {
-            console.log("Username '".concat(newUsername, "' is available."));
+            console.log(`Username '${newUsername}' is available.`);
         }
     }
 }
 // List of current usernames
-var currentUsers = ["John", "Alice", "Bob", "Eve", "Mary"];
+const currentUsers = ["John", "Alice", "Bob", "Eve", "Mary"];
 // List of new usernames
-var newUsers = ["Jane", "Bob", "David", "EVE", "Kate"];
+const newUsers = ["Jane", "Bob", "David", "EVE", "Kate"];
 // Check the availability of new usernames
 check_usernames(currentUsers, newUsers);
 //33. Ordinal Numbers: Ordinal numbers indicate their position in a array, such as 1st or 2nd. Most ordinal numbers end in th, except 1, 2, and 3.
 // • Store the numbers 1 through 9 in a array.
-var ordinal_number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let ordinal_number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // • Loop through the array.
 // • Use an if-else chain inside the loop to print the proper ordinal ending for each number. Your output should read "1st 2nd 3rd 4th 5th 6th 7th 8th 9th", and each result should be on a separate line.
-for (var i = 0; i < ordinal_number.length; i++) {
+for (let i = 0; i < ordinal_number.length; i++) {
     if (ordinal_number[i] == 1) {
-        console.log("".concat(ordinal_number[i], "st"));
+        console.log(`${ordinal_number[i]}st`);
     }
     else if (ordinal_number[i] == 2) {
-        console.log("".concat(ordinal_number[i], "nd"));
+        console.log(`${ordinal_number[i]}nd`);
     }
     else if (ordinal_number[i] == 3) {
-        console.log("".concat(ordinal_number[i], "rd"));
+        console.log(`${ordinal_number[i]}rd`);
     }
     else {
-        console.log("".concat(ordinal_number[i], "th"));
+        console.log(`${ordinal_number[i]}th`);
     }
 }
 //34. Pizzas: Think of at least three kinds of your favorite pizza. Store these pizza names in a array, and then use a for loop to print the name of each pizza.
 // • Modify your for loop to print a sentence using the name of the pizza instead of printing just the name of the pizza. For each pizza you should have one line of output containing a simple statement like I like pepperoni pizza.
 // • Add a line at the end of your program, outside the for loop, that states how much you like pizza. The output should consist of three or more lines about the kinds of pizza you like and then an additional sentence, such as I really love pizza!
-var pizza = ["Chicken Fajita", "Malai Boti", "Pepproni", "Afghani Tikka"];
-for (var i = 0; i < pizza.length; i++) {
+let pizza = ["Chicken Fajita", "Malai Boti", "Pepproni", "Afghani Tikka"];
+for (let i = 0; i < pizza.length; i++) {
     console.log("We have " + pizza[i]);
 }
 console.log("I like various kinds of pizza. Pizza is my all-time favorite comfort food. I really love pizza!");
 //35. Animals: Think of at least three different animals that have a common characteristic. Store the names of these animals in a list, and then use a for loop to print out the name of each animal. • Modify your program to print a statement about each animal, such as A dog would make a great pet. • Add a line at the end of your program stating what these animals have in common. You could print a sentence such as Any of these animals would make a great pet!
-var animal = ["dog", "cat", "parrot"];
-for (var i = 0; i < animal.length; i++) {
+let animal = ["dog", "cat", "parrot"];
+for (let i = 0; i < animal.length; i++) {
     console.log(animal[i] + " would be a great pet");
 }
 console.log("any of these would be a great pet");
@@ -403,18 +391,15 @@ console.log("any of these would be a great pet");
 }
 make_shirt("L", "Hello World");*/
 //37. Large Shirts: Modify the make_shirt() function so that shirts are large by default with a message that reads I love TypeScript. Make a large shirt and a medium shirt with the default message, and a shirt of any size with a different message.
-function make_shirt(size, text) {
-    if (size === void 0) { size = "L"; }
-    if (text === void 0) { text = "I Love Typescript"; }
-    console.log("size of the shirt is ".concat(size, " and the text is: \"").concat(text, "\""));
+function make_shirt(size = "L", text = "I Love Typescript") {
+    console.log(`size of the shirt is ${size} and the text is: "${text}"`);
 }
 make_shirt();
 make_shirt("M");
 make_shirt("S", "Hello World");
 //38. Cities: Write a function called describe_city() that accepts the name of a city and its country. The function should print a simple sentence, such as Karachi is in Pakistan. Give the parameter for the country a default value. Call your function for three different cities, at least one of which is not in the default country.
-function describe_city(city_name, country_name) {
-    if (country_name === void 0) { country_name = "Pakistan"; }
-    console.log("".concat(city_name, " is in ").concat(country_name));
+function describe_city(city_name, country_name = "Pakistan") {
+    console.log(`${city_name} is in ${country_name}`);
 }
 describe_city("Karachi");
 describe_city("Lahore");
@@ -423,14 +408,14 @@ describe_city("Delhi");
 // "Lahore, Pakistan"
 // Call your function with at least three city-country pairs, and print the value that’s returned.
 function city_country(city, country) {
-    return "".concat(city, ", ").concat(country);
+    return `${city}, ${country}`;
 }
 console.log(city_country("Lahore", "Pakistan"));
 console.log(city_country("Istanbul", "Turkey"));
 console.log(city_country("Toronto", "Canada"));
 //40. Album: Write a function called make_album() that builds a Object describing a music album. The function should take in an artist name and an album title, and it should return a Object containing these two pieces of information. Use the function to make three dictionaries representing different albums. Print each return value to show that Objects are storing the album information correctly. Add an optional parameter to make_album() that allows you to store the number of tracks on an album. If the calling line includes a value for the number of tracks, add that value to the album’s Object. Make at least one new function call that includes the number of tracks on an album.
 function make_album(artist, title, num_tracks) {
-    var album = {
+    const album = {
         artist: artist,
         title: title,
         num_tracks: num_tracks
@@ -440,9 +425,9 @@ function make_album(artist, title, num_tracks) {
     }
     return album;
 }
-var album1 = make_album("Atif Aslam", "In dinon", 5);
-var album2 = make_album("Ali Zafar", "song", 1);
-var album3 = make_album("Imagine Dragons", "Believer", 8);
+const album1 = make_album("Atif Aslam", "In dinon", 5);
+const album2 = make_album("Ali Zafar", "song", 1);
+const album3 = make_album("Imagine Dragons", "Believer", 8);
 console.log(album1);
 console.log(album2);
 console.log(album3);
@@ -450,49 +435,44 @@ console.log(album3);
 function show_magicians(magician_names) {
     console.log(magician_names);
 }
-var magician_names = ["Eric", "Donna", "Ande wale baba", "Peer baba"];
+let magician_names = ["Eric", "Donna", "Ande wale baba", "Peer baba"];
 show_magicians(magician_names);
 //42. Great Magicians: Start with a copy of your program from Exercise 39. Write a function called make_great() that modifies the array of magicians by adding the phrase the Great to each magician’s name. Call show_magicians() to see that the list has actually been modified.
 function make_great(magician_names) {
-    var modified_magician_names = [];
-    for (var _i = 0, magician_names_1 = magician_names; _i < magician_names_1.length; _i++) {
-        var magician = magician_names_1[_i];
+    const modified_magician_names = [];
+    for (const magician of magician_names) {
         modified_magician_names.push("the Great " + magician);
     }
     return modified_magician_names;
 }
 //43. Unchanged Magicians: Start with your work from Exercise 40. Call the function make_great() with a copy of the array of magicians’ names. Because the original array will be unchanged, return the new array and store it in a separate array. Call show_magicians() with each array to show that you have one array of the original names and one array with the Great added to each magician’s name.
 magician_names = ["Eric", "Donna", "Ande wale baba", "Peer baba"];
-var originalMagicianNames = magician_names.slice();
-var modifiedMagicianNames = make_great(originalMagicianNames);
+const originalMagicianNames = magician_names.slice();
+const modifiedMagicianNames = make_great(originalMagicianNames);
 show_magicians(modifiedMagicianNames);
 show_magicians(originalMagicianNames); //original array
 //44. Sandwiches: Write a function that accepts a array of items a person wants on a sandwich. The function should have one parameter that collects as many items as the function call provides, and it should print a summary of the sandwich that is being ordered. Call the function three times, using a different number of arguments each time.
 function sandwich(items) {
-    console.log("you ordered ".concat(items));
+    console.log(`you ordered ${items}`);
 }
 sandwich(["bread"]);
 sandwich(["chicken", "cheese", "mayonnaise"]);
 sandwich(["ketchup", "cucumber"]);
 //45. Cars: Write a function that stores information about a car in a Object. The function should always receive a manufacturer and a model name. It should then accept an arbitrary number of keyword arguments. Call the function with the required information and two other name-value pairs, such as a color or an optional feature. Print the Object that’s returned to make sure all the information was stored correctly.
-function store_car_info(manufacturer, model) {
-    var kwargs = [];
-    for (var _i = 2; _i < arguments.length; _i++) {
-        kwargs[_i - 2] = arguments[_i];
-    }
-    var carInfo = {
+function store_car_info(manufacturer, model, ...kwargs) {
+    const carInfo = {
         manufacturer: manufacturer,
         model: model,
     };
     // Add the keyword arguments to the carInfo object
-    for (var i = 0; i < kwargs.length; i += 2) {
-        var key = kwargs[i];
-        var value = kwargs[i + 1];
+    for (let i = 0; i < kwargs.length; i += 2) {
+        const key = kwargs[i];
+        const value = kwargs[i + 1];
         carInfo[key] = value;
     }
     return carInfo;
 }
 // Call the function with required information and additional name-value pairs
-var car = store_car_info("Toyota", "Camry", "color", "silver", "year", 2022);
+const car = store_car_info("Toyota", "Camry", "color", "silver", "year", 2022);
 // Print the returned object to check if all the information was stored correctly
 console.log(car);

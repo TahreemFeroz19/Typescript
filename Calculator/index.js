@@ -1,17 +1,22 @@
 #! /usr/bin/env node
-import { Sub } from "./subtract.js";
-import { Sum } from "./add.js";
-import { Division } from "./division.js";
-import { Multiply } from "./multiply.js";
-import inquirer from "inquirer";
-import chalkAnimation from "chalk-animation";
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const subtract_js_1 = require("./subtract.js");
+const add_js_1 = require("./add.js");
+const division_js_1 = require("./division.js");
+const multiply_js_1 = require("./multiply.js");
+const inquirer_1 = __importDefault(require("inquirer"));
+const chalk_animation_1 = __importDefault(require("chalk-animation"));
 const sleep = () => {
     return new Promise((res) => {
         setTimeout(res, 2000);
     });
 };
 async function welcome() {
-    let rainbowTitle = chalkAnimation.rainbow("Lets start calculation");
+    let rainbowTitle = chalk_animation_1.default.rainbow("Lets start calculation");
     await sleep();
     rainbowTitle.stop();
     console.log(`     _____________________
@@ -30,7 +35,7 @@ async function welcome() {
     |_____________________|`);
 }
 async function askQuestion() {
-    await inquirer
+    await inquirer_1.default
         .prompt([
         {
             type: "list",
@@ -51,16 +56,16 @@ async function askQuestion() {
     ])
         .then((answers) => {
         if (answers.operator == "Addition") {
-            console.log(`Addition of ${answers.num1} + ${answers.num2} is ${Sum(answers.num1, answers.num2)}`);
+            console.log(`Addition of ${answers.num1} + ${answers.num2} is ${(0, add_js_1.Sum)(answers.num1, answers.num2)}`);
         }
         else if (answers.operator == "Subtraction") {
-            console.log(`Subtraction of ${answers.num1} - ${answers.num2} is ${Sub(answers.num1, answers.num2)}`);
+            console.log(`Subtraction of ${answers.num1} - ${answers.num2} is ${(0, subtract_js_1.Sub)(answers.num1, answers.num2)}`);
         }
         else if (answers.operator == "Multiplication") {
-            console.log(`Multiplication of ${answers.num1} * ${answers.num2} is ${Multiply(answers.num1, answers.num2)}`);
+            console.log(`Multiplication of ${answers.num1} * ${answers.num2} is ${(0, multiply_js_1.Multiply)(answers.num1, answers.num2)}`);
         }
         else if (answers.operator == "Division") {
-            console.log(`Division of ${answers.num1} / ${answers.num2} is ${Division(answers.num1, answers.num2)}`);
+            console.log(`Division of ${answers.num1} / ${answers.num2} is ${(0, division_js_1.Division)(answers.num1, answers.num2)}`);
         }
     });
 }
@@ -68,7 +73,7 @@ await welcome();
 async function startAgain() {
     do {
         await askQuestion();
-        var again = await inquirer.prompt({
+        var again = await inquirer_1.default.prompt({
             type: "input",
             name: "restart",
             message: "Do you want to continue? Press y or n"

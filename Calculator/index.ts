@@ -4,10 +4,7 @@ import { Sum } from "./add.js"
 import { Division } from "./division.js"
 import { Multiply } from "./multiply.js"
 import inquirer from "inquirer"
-import chalk from "chalk"
 import chalkAnimation from "chalk-animation"
-import { type } from "os"
-import { log } from "console"
 
 const sleep =() =>{
     return new Promise((res)=>{
