@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
@@ -14,6 +15,7 @@ async function welcome() {
 await welcome();
 let username = "Ali";
 let userpin = 1234;
+let balance = 20000;
 async function user() {
     let details = await inquirer.prompt({
         type: "number",
@@ -33,7 +35,6 @@ async function enterAmount() {
     });
 }
 async function transaction() {
-    let balance = 200;
     let transactionType = await inquirer
         .prompt([
         {

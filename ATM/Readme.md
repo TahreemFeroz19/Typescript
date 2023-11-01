@@ -29,3 +29,5 @@ npx atm-by-tahreem
 - Typescript
 - Node.js (for running the application)
 
+## Screenshot
+![Alt text](image.png)
