@@ -1,0 +1,162 @@
+[
+    {
+        "question": "What are the three main 'simple types' in TypeScript?",        
+        "options": [
+            "Object, Array, Symbol",
+            "Object, String, Number",
+            "Array, Object, Boolean",
+            "Boolean, Number, String"
+        ],
+        "answer": "Boolean, Number, String",
+        "level": "easy"
+    },
+    {
+        "question": "True or False: TypeScript can always correctly infer a variables type.",
+        "options": [
+            "False",
+            "True"
+        ],
+        "answer": "False",
+        "level": "easy"
+    },
+    {
+        "question": "What are the two types of enums?",
+        "options": [
+            "String and Number",
+            "Number and Number Array",
+            "String and Boolean",
+            "Number and Boolean"
+        ],
+        "answer": "String and Number",
+        "level": "easy"
+    },
+    {
+        "question": "Numeric enums first value is defaulted to what?",
+        "options": [
+            "0",
+            "1",
+            "10",
+            "5"
+        ],
+        "answer": "0",
+        "level": "easy"
+    },
+    {
+        "question": "What type of assignment is this variable",
+        "code": "`const fullName: string = 'Dylan Israel';`",
+        "options": [
+            "Implicit",
+            "Explicit"
+        ],
+        "answer": "Explicit",
+        "level": "easy"
+    },
+    {
+        "question": "______ is similar to 'any', but a safer alternative when uncertain about the type.",
+        "options": [
+            "Unknown",
+            "Similar",
+            "Never"
+        ],
+        "answer": "Unknown",
+        "level": "intermediate"
+    },
+    {
+        "question": "What is the inherited type for the variable example in",
+        "code": "`const example = ['Dylan']`",
+        "options": [
+            "String",
+            "Unknown",
+            "Any"
+        ],
+        "answer": "String",
+        "level": "intermediate"
+    },
+    {
+        "question": "What does the 'readonly' access modifier do for an array variable assignment like",
+        "code": "`const codeNames: readonly string[] = ['Coding', 'God']`",
+        "options": [
+            "Makes you read it for better clean code",
+            "Allows no changes and is there simply to be read from and not modified",
+            "Makes it private and can only be used in the file its created",
+            "Allows only adding but not deleting elements in the array"
+        ],
+        "answer": "Allows no changes and is there simply to be read from and not modified",
+        "level": "intermediate"
+    },
+    {
+        "question": "Which is a successful example of this tuple",
+        "code": "`[number, string]`",
+        "options": [
+            "const ourTuple = [101, 101, 'Coding God', 'Coding God']",
+            "'const ourTuple = [101]'",
+            "const ourTuple = [101, 'Coding God']",
+            "const ourTuple = ['Coding God', 101]"
+        ],
+        "answer": "const ourTuple = [101, 'Coding God']",
+        "level": "intermediate"
+    },
+    {
+        "question": "Type Aliases are mostly used with ______?",
+        "options": [
+            "Booleans",
+            "Numbers",
+            "Strings"
+        ],
+        "answer": "Strings",
+        "level": "intermediate"
+    },
+    {
+        "question": "Which of the given code examples is a correct way of calling a generic function?",
+        "code": "function add<T>(arr: T[], item: T): T[] { if (arr.indexOf(item) >= 0) { return arr; } arr.push(item); return arr; } var nrs = [1, 5, 3];",        
+        "options": [
+            "add(<number>, nrs, 10)",
+            "add(number)(nrs, 10)",
+            "add<number>(nrs, 10)",
+            "add(nrs<number>, 10)"
+        ],
+        "answer": "add<number>(nrs, 10)",
+        "level": "difficult"
+    },
+    {
+        "question": "Is this code a correct example of using generics in TypeScript (we get no errors during compilation)?",
+        "code": "class Collection<T> { items: T[]; find(keyword: string) : T { return this.items.filter(el => el.value === keyword)[0]; } }",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "answer": "No",
+        "level": "difficult"
+    },
+    {
+        "question": "The Generic type variable must always be represented by the letter T. True or false?",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "level": "difficult"
+    },
+    {
+        "question": "Which of the given code examples is a correct way of creating a generic interface?",
+        "options": [
+            "interface Shelf { items: T[]; }",
+            "interface Shelf<T> { items: T[]; }",
+            "interface Shelf[T] { items: T[]; }",
+            "interface Shelf { items: T[]; }<T>"
+        ],
+        "answer": "interface Shelf<T> { items: T[]; }",
+        "level": "difficult"
+    },
+    {
+        "question": "Which of the given code examples is a correct way of creating a generic class?",
+        "options": [
+            "class Collection<T> { items: T[]; }",
+            "class Collection { items: T[]; }",
+            "class Collection: T[] { items: T[]; }",
+            "class Collection[T] { items: T[]; }"
+        ],
+        "answer": "class Collection<T> { items: T[]; }",
+        "level": "difficult"
+    }
+]
